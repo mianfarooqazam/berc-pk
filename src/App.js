@@ -1,15 +1,32 @@
 
 
+
+
+
+import React, { useState, useEffect } from 'react';
+import AnimatedText from './components/AnimatedText';
+import Loader from './components//Loader';
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-      </header>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <AnimatedText />
+        </div>
+      )}
     </div>
   );
 }
