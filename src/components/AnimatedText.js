@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const AnimatedText = () => {
-  const words = ['fast', 'experienced', 'players'];
+  const words = ['fast', 'experienced', 'dedicated'];
   const colors = ['text-purple-500', 'text-red-500', 'text-yellow-500'];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,7 +16,7 @@ const AnimatedText = () => {
   return (
     <div className="h-screen flex items-center justify-center">
       <h1 className="text-4xl font-bold">
-        Our team is:{' '}
+        Our team is {' '}
         <span className={`${colors[currentIndex]} transition-all duration-500`}>
           {words[currentIndex]}
         </span>
