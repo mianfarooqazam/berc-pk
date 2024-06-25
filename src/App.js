@@ -1,11 +1,7 @@
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import AnimatedText from './components/AnimatedText';
-import Loader from './components//Loader';
+import Loader from './components/Loader';
+import ResponsiveComponent from './components/ResponsiveComponent';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +21,7 @@ function App() {
       ) : (
         <div>
           <AnimatedText />
+          <ResponsiveComponent />
         </div>
       )}
     </div>
