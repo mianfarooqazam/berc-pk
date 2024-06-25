@@ -5,6 +5,9 @@ import LetsTalk from './pages/LetsTalk';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Navbar from './pages/Navbar';
+import WhyUs from './pages/WhyUs';
+import Tools from './pages/Tools';
+import Services from './pages/Services';
 
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
         <div>
           <Navbar />
           <Home />
+          <WhyUs />
+          <Tools />
+          <Services />
           <Team />
           <LetsTalk />
           <AnimatedText />
