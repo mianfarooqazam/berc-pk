@@ -24,7 +24,9 @@ const Navbar = () => {
           <li>
             <a href="#team" className="text-lg font-medium text-gray-700">Team</a>
           </li>
-          
+          <li>
+            <a href="#gallery" className="text-lg font-medium text-gray-700">Gallery</a>
+          </li>
           <li>
             <a href="#lets-talk" className="text-lg font-medium text-gray-700">Let's Talk</a>
           </li>

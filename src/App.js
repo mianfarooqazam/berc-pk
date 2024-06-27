@@ -8,6 +8,7 @@ import Navbar from './pages/Navbar';
 import WhyUs from './pages/WhyUs';
 import Tools from './pages/Tools';
 import Services from './pages/Services';
+import Gallery from './pages/Gallery';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Tools />
           <Services />
           <Team />
+          <Gallery/>
           <LetsTalk />
           <AnimatedText />
         </div>
