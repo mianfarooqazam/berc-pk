@@ -23,7 +23,7 @@ const Team = () => {
       <section id="team" className="h-screen flex">
         <div 
           className="w-1/2 flex flex-col items-center justify-center p-10" 
-          style={{ backgroundColor: 'rgb(232, 255, 174)' }}
+          style={{ backgroundColor: '#fff' }}
         >
           <h1 
             className="font-bold text-center mb-4 font-medium" 
