@@ -6,17 +6,26 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Team = () => {
   const teamMembers = [
     { name: 'Dr. Naveed Ahmad', role: 'Director Building Energy Research Center UET Peshawar' },
-    { name: 'Jane Smith', role: 'Project Manager' },
-    { name: 'Sam Wilson', role: 'UX Designer' },
-    { name: 'Lisa Kudrow', role: 'Backend Engineer' },
-    { name: 'Michael Johnson', role: 'QA Engineer' },
-    { name: 'Emily Davis', role: 'Frontend Developer' },
+    { name: 'Dr. Fakhr e Alam', role: 'Team Lead Building Energy Research Center' },
+    { name: 'Engr. Fazl e Yazdan', role: 'Team Lead Building Energy Research Center' },
+    { name: 'Syed Waqas Ali Shah', role: 'Administrative Officer' },
+    { name: 'Abid Ullah', role: 'Project Coordinator' },
+    { name: 'Maidah Arshad', role: 'Communication and Promotional Expert' },
+    { name: 'Essa Khan', role: 'Communication Expert Assistant' },
+    { name: 'Mishal Haq', role: 'Graduate Engineer' },
+    { name: 'Fahad Rashid', role: 'Senior Research Assistant' },
+    { name: 'Kashif Khan', role: 'Research Assistant' },
+    { name: 'Muhammad Osama Aziz', role: 'Research Associate' },
+    { name: 'Rafi Ullah', role: 'Research Assistant' },
+    { name: 'Engr: Muhammad Ilyas', role: 'Web Developer' },
+    { name: 'Sajid Khan', role: 'Software Developer' },
+    { name: 'Farooq Azam', role: 'UI/UX' },
+    { name: 'Hamad Aftab', role: 'Graduate Engineer' },
+    { name: 'Muhammad Abbas', role: 'Graduate Engineer' },
+    { name: 'Usman Ur Rehman', role: 'Graduate Engineer' },
+    { name: 'Zainab Akbar', role: 'Research Assistant' },
+    { name: 'Iqra Hussain', role: 'Graduate Engineer' },
   ];
-
-  // Split the team members into two halves
-  const halfLength = Math.ceil(teamMembers.length / 2);
-  const firstHalf = teamMembers.slice(0, halfLength);
-  const secondHalf = teamMembers.slice(halfLength);
 
   return (
     <div>
@@ -50,16 +59,26 @@ const Team = () => {
         </div>
       </section>
 
-      <section id="team" className="h-screen flex">
+      <section id="team-members" className="flex">
         <div 
-          className="w-1/2 flex flex-col items-center justify-center p-10 bg-white" 
-         
-        >
-        </div>
-        <div 
-          className="w-1/2 h-full"
+          className="w-full flex flex-col items-center justify-center p-10"
           style={{ backgroundColor: 'rgb(232, 255, 174)' }}
         >
+          <div className="flex flex-wrap justify-center">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center">
+                <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center" style={{ width: '250px', height: '300px' }}>
+                  <Avatar sx={{ width: 96, height: 96, mb: 4 }}>
+                    <AccountCircleIcon sx={{ width: 96, height: 96 }} />
+                  </Avatar>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                    <p className="text-gray-600">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
