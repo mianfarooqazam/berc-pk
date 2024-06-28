@@ -50,13 +50,21 @@ const Team = () => {
         </div>
       </section>
 
+      <header className="w-full py-2"  style={{ backgroundColor: 'rgb(232, 255, 174)' }}>
+        <h1 
+          className="font-bold text-center font-medium" 
+          style={{ fontSize: '40px', marginTop: '40px' }}
+        >
+          Meet our Super Team
+        </h1>
+      </header>
+
       <section id="team-members" className="flex">
         <div 
           className="w-full flex flex-col items-center justify-center p-10"
           style={{ backgroundColor: 'rgb(232, 255, 174)' }}
         >
           <div className="flex flex-wrap justify-center">
-          
             {teamMembers.map((member, index) => (
               <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center">
                 <div 
