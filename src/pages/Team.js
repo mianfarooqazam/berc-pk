@@ -68,7 +68,7 @@ const Team = () => {
             {teamMembers.map((member, index) => (
               <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center">
                 <div 
-                  className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center cursor-pointer transform transition duration-500 hover:scale-105" 
+                  className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center cursor-pointer transform transition duration-500 hover:scale-105 relative group" 
                   style={{ width: '250px', height: '300px' }}
                   onClick={() => handleClickOpen(member)}
                 >
@@ -78,6 +78,9 @@ const Team = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                     <p className="text-gray-600">{member.role}</p>
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full text-center pb-2 hidden group-hover:block">
+                    <span className="bg-[rgb(232,255,174)]  text-sm px-2 py-1 rounded">View</span>
                   </div>
                 </div>
               </div>
