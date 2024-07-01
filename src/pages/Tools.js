@@ -42,14 +42,23 @@ const Tools = () => {
               BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {tools.map((tool) => (
-              <Button 
-                key={tool.name} 
-                variant="contained" 
-                color="primary" 
-                onClick={() => handleOpen(tool)}
-              >
-                {tool.name}
-              </Button>
+               <Button 
+               key={tool.name} 
+               variant="contained" 
+               onClick={() => handleOpen(tool)}
+               style={{
+                 background: 'linear-gradient(45deg, #35a2eb 30%, #35a2eb 90%)',
+                 border: 0,
+                 borderRadius: 3,
+                 boxShadow: '0 3px 5px 2px rgba(53, 162, 235,.3)',
+                 color: 'white',
+                 height: 48,
+                 padding: '0 30px',
+                 margin: '10px',
+               }}
+             >
+               {tool.name}
+             </Button>
             ))}
           </div>
         </div>
