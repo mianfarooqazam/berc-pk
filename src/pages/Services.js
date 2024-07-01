@@ -4,7 +4,7 @@ import { faCertificate, faComments, faFlask, faRecycle } from '@fortawesome/free
 
 const Services = () => {
   return (
-    <section id="services" className="h-screen flex flex-col items-center justify-center p-8" style={{ backgroundColor: '#D4CDC5' }}>
+    <section id="services" className="h-screen flex flex-col items-center justify-center p-8" style={{ backgroundColor: 'yellow' }}>
       <h1 className="text-4xl font-bold mb-12">BERC Offers</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         <div className="bg-white shadow-md p-6 text-center rounded-lg transform transition-transform hover:scale-105 hover:animate-gasp">

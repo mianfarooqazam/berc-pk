@@ -31,12 +31,7 @@ const LetsTalk = () => {
     
       <section id="lets-talk-2" className="relative h-screen flex items-center justify-center" style={{ backgroundColor: '#fff', marginTop: '-20px' }}>
         <Container maxWidth="lg">
-        <h1 
-            className="font-bold text-center mb-8" 
-            style={{ fontSize: '50px' }}
-          >
-            Contact Us!
-          </h1>
+        
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Box
