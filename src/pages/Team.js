@@ -26,7 +26,7 @@ const Team = () => {
           style={{ backgroundColor: '#fff' }}
         >
           <h1 
-            className="font-bold text-center mb-4 font-medium" 
+            className="text-center mb-4 font-medium" 
             style={{ fontSize: '40px', marginTop: '40px' }}
           >
             We bring a wealth of skills and experience from a wide range of backgrounds.
@@ -52,7 +52,7 @@ const Team = () => {
 
       <header className="w-full py-2"  style={{ backgroundColor: 'rgb(232, 255, 174)' }}>
         <h1 
-          className="font-bold text-center font-medium" 
+          className="text-center font-medium" 
           style={{ fontSize: '40px', marginTop: '40px' }}
         >
           Meet our Super Team

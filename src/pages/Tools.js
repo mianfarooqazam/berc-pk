@@ -26,8 +26,15 @@ const Tools = () => {
   return (
     <div>
       <section id="tools" className="h-screen flex mb-0" style={{ backgroundColor: '#ffff' }}>
-        <div className="w-1/2 h-full">
-          <img src={bg} alt="Background" className="w-full h-full object-cover" />
+      <div 
+          className="w-1/2 h-full"
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}
+        >
         </div>
         <div className="w-1/2 h-full flex flex-col items-center justify-start p-10">
           <h1 
@@ -60,6 +67,9 @@ const Tools = () => {
                {tool.name}
              </Button>
             ))}
+            <div className="absolute bottom-0 left-0 w-full text-center pb-2 hidden group-hover:block">
+                    <span className="bg-[rgb(232,255,174)]  text-sm px-2 py-1 rounded">View</span>
+                  </div>
           </div>
         </div>
       </section>
