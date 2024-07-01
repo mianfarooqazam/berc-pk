@@ -77,7 +77,7 @@ const Team = () => {
                     sx={{ width: 96, height: 96, mb: 4 }}
                   />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2" >{member.name}</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-center">{member.name}</h3>
                     <p className="text-gray-600">{member.role}</p>
                   </div>
                   <div className="absolute bottom-0 left-0 w-full text-center pb-2 hidden group-hover:block">
@@ -95,6 +95,7 @@ const Team = () => {
         handleClose={handleClose}
         title={selectedMember.name}
         description={selectedMember.description}
+        img={selectedMember.img} 
       />
     </div>
   );
