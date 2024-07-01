@@ -2,12 +2,12 @@ import React from 'react';
 import { TextField, Button, Box, Container, Grid, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import bg from '../assets/call-2.jpg'; 
+import bg from '../assets/call.jpg'; 
 
 const LetsTalk = () => {
   return (
     <div>
-      <section id="lets-talk" className="h-screen flex mb-0" style={{ backgroundColor: '#ffff' }}>
+      <section id="lets-talk" className="h-screen flex mb-0" style={{ backgroundColor: '#DBE1EF' }}>
         <div className="w-1/2 h-full">
           <img src={bg} alt="Background" className="w-full h-full object-cover" />
         </div>

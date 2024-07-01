@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedText from './components/AnimatedText';
 import Loader from './components/Loader';
 import LetsTalk from './pages/LetsTalk';
 import Home from './pages/Home';

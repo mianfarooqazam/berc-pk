@@ -15,11 +15,12 @@ const Navbar = () => {
           <li>
             <a href="#why-us" className="text-lg font-medium text-gray-700">Why Us</a>
           </li>
-          <li>
-            <a href="#services" className="text-lg font-medium text-gray-700">Services</a>
-          </li>
+          
           <li>
             <a href="#tools" className="text-lg font-medium text-gray-700">Tools</a>
+          </li>
+          <li>
+            <a href="#services" className="text-lg font-medium text-gray-700">Services</a>
           </li>
           <li>
             <a href="#team" className="text-lg font-medium text-gray-700">Team</a>
