@@ -7,12 +7,19 @@ import bpdImg1 from '../assets/toolsImages/bpd-img1.jpg';
 import bpdImg2 from '../assets/toolsImages/bpd-img2.jpg';
 import bpdImg3 from '../assets/toolsImages/bpd-img3.jpg';
 import bpdImg4 from '../assets/toolsImages/bpd-img4.jpg';
+import lcaImg1 from '../assets/toolsImages/lca-img1.jpg';
+import lcaImg2 from '../assets/toolsImages/lca-img2.jpg';
+import lcaImg3 from '../assets/toolsImages/lca-img3.jpg';
+import lcaImg4 from '../assets/toolsImages/lca-img4.jpg';
+import lcaImg5 from '../assets/toolsImages/lca-img5.jpg';
+import lcaImg6 from '../assets/toolsImages/lca-img6.jpg';
+import lcaImg7 from '../assets/toolsImages/lca-img7.jpg';
 
 const tools = [
-  { name: 'LPD (Lighting Power Density) Tool', description: 'Description for LPD Tool' },
+  { name: 'LCA (Life Cycle Assessment) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
   { name: 'BPD (Building Performance Design) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
-  { name: 'RLF (Residential Lighting Fixture) Tool', description: 'Description for RLF Tool' },
-  { name: 'Compliance Tool', description: 'Description for Compliance Tool' },
+  { name: 'RLF (Residential Lighting Fixture) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
+  { name: 'Compliance Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
 ];
 
 const Tools = () => {
@@ -106,9 +113,9 @@ const Tools = () => {
           >
             <Typography 
               id="transition-modal-title" 
-              variant="h6" 
+              variant="h5" 
               component="h2" 
-              sx={{ textAlign: 'center', mb: 2 }}
+              sx={{ textAlign: 'center', mb: 2, textDecoration: 'underline' }}
             >
               {selectedTool?.name}
             </Typography>
@@ -137,6 +144,40 @@ const Tools = () => {
                   </Button>
                 </Box>
               </>
+            ) : selectedTool?.name === 'LCA (Life Cycle Assessment) Tool' ? (
+              <>
+                <Carousel showThumbs={false}>
+                  <div>
+                    <img src={lcaImg1} alt="LCA Image 1" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg2} alt="LCA Image 2" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg3} alt="LCA Image 3" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg4} alt="LCA Image 4" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg5} alt="LCA Image 5" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg6} alt="LCA Image 6" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg7} alt="LCA Image 7" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                </Carousel>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
             ) : (
               <>
                 <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
@@ -152,8 +193,6 @@ const Tools = () => {
           </Box>
         </Fade>
       </Modal>
-    
-     
     </div>
   );
 };
