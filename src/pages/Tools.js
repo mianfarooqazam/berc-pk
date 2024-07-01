@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Box, Modal, Fade, Backdrop, Typography } from '@mui/material';
 import bg from '../assets/tool2.jpg'; 
-
+import bpdImg1 from '../assets/toolsImages/bpd-img1.jpg';
+import bpdImg2 from '../assets/toolsImages/bpd-img2.jpg';
+import bpdImg3 from '../assets/toolsImages/bpd-img3.jpg';
+import bpdImg4 from '../assets/toolsImages/bpd-img4.jpg';
 const tools = [
   { name: 'LPD (Lighting Power Density) Tool', description: 'Description for LPD Tool' },
   { name: 'BPD (Building Performance Design) Tool', description: 'Description for BPD Tool' },
