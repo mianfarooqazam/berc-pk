@@ -49,7 +49,7 @@ const Team = () => {
         </div>
       </section>
 
-      <header className="w-full py-2" style={{ backgroundColor: 'rgb(232, 255, 174)' }}>
+      <header className="w-full py-2" style={{ backgroundColor: '#ffff' }}>
         <h1 
           className="text-center font-medium" 
           style={{ fontSize: '40px', marginTop: '40px' }}
@@ -61,7 +61,7 @@ const Team = () => {
       <section id="team-members" className="flex">
         <div 
           className="w-full flex flex-col items-center justify-center p-10"
-          style={{ backgroundColor: 'rgb(232, 255, 174)' }}
+          style={{ backgroundColor: '#fff' }}
         >
           <div className="flex flex-wrap justify-center">
             {teamMembers.map((member, index) => (
