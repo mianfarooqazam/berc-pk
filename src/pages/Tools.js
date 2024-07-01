@@ -19,12 +19,14 @@ import rlfImg2 from '../assets/toolsImages/rlf-img2.jpg';
 import rlfImg3 from '../assets/toolsImages/rlf-img3.jpg';
 import rlfImg4 from '../assets/toolsImages/rlf-img4.jpg';
 import rlfImg5 from '../assets/toolsImages/rlf-img5.jpg';
+import UImg from '../assets/toolsImages/uvalue-img.jpg'; // Import the U-Values image
 
 const tools = [
   { name: 'LCA (Life Cycle Assessment) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
   { name: 'BPD (Building Performance Design) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
   { name: 'RLF (Residential Lighting Fixture) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
   { name: 'Compliance Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
+  { name: 'U-Values Finder for Pakistan Cities', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
 ];
 
 const Tools = () => {
@@ -233,6 +235,22 @@ const Tools = () => {
                   </div>
                   <div>
                     <img src={lcaImg7} alt="LCA Image 7" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                </Carousel>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
+            ) : selectedTool?.name === 'U-Values Finder for Pakistan Cities' ? (
+              <>
+                <Carousel showThumbs={false}>
+                  <div>
+                    <img src={UImg} alt="U-Values Finder Image" style={{ maxHeight: '500px', objectFit: 'contain' }} />
                   </div>
                 </Carousel>
                 <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
