@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Button, Box, Modal, Fade, Backdrop, Typography } from '@mui/material';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import bg from '../assets/tool2.jpg'; 
 import bpdImg1 from '../assets/toolsImages/bpd-img1.jpg';
 import bpdImg2 from '../assets/toolsImages/bpd-img2.jpg';
 import bpdImg3 from '../assets/toolsImages/bpd-img3.jpg';
 import bpdImg4 from '../assets/toolsImages/bpd-img4.jpg';
+
 const tools = [
   { name: 'LPD (Lighting Power Density) Tool', description: 'Description for LPD Tool' },
-  { name: 'BPD (Building Performance Design) Tool', description: 'Description for BPD Tool' },
+  { name: 'BPD (Building Performance Design) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
   { name: 'RLF (Residential Lighting Fixture) Tool', description: 'Description for RLF Tool' },
   { name: 'Compliance Tool', description: 'Description for Compliance Tool' },
 ];
@@ -29,7 +32,7 @@ const Tools = () => {
   return (
     <div>
       <section id="tools" className="h-screen flex mb-0" style={{ backgroundColor: '#ffff' }}>
-      <div 
+        <div 
           className="w-1/2 h-full"
           style={{
             backgroundImage: `url(${bg})`,
@@ -52,27 +55,24 @@ const Tools = () => {
               BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {tools.map((tool) => (
-               <Button 
-               key={tool.name} 
-               variant="contained" 
-               onClick={() => handleOpen(tool)}
-               style={{
-                 background: 'linear-gradient(45deg, #35a2eb 30%, #35a2eb 90%)',
-                 border: 0,
-                 borderRadius: 3,
-                 boxShadow: '0 3px 5px 2px rgba(53, 162, 235,.3)',
-                 color: 'white',
-                 height: 48,
-                 padding: '0 30px',
-                 margin: '10px',
-               }}
-             >
-               {tool.name}
-             </Button>
+              <Button 
+                key={tool.name} 
+                variant="contained" 
+                onClick={() => handleOpen(tool)}
+                style={{
+                  background: 'linear-gradient(45deg, #35a2eb 30%, #35a2eb 90%)',
+                  border: 0,
+                  borderRadius: 3,
+                  boxShadow: '0 3px 5px 2px rgba(53, 162, 235,.3)',
+                  color: 'white',
+                  height: 48,
+                  padding: '0 30px',
+                  margin: '10px',
+                }}
+              >
+                {tool.name}
+              </Button>
             ))}
-            <div className="absolute bottom-0 left-0 w-full text-center pb-2 hidden group-hover:block">
-                    <span className="bg-[rgb(232,255,174)]  text-sm px-2 py-1 rounded">View</span>
-                  </div>
           </div>
         </div>
       </section>
@@ -95,26 +95,65 @@ const Tools = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 400,
+              width: '80%',
+              height: '80%',
               bgcolor: 'background.paper',
               border: '2px solid #000',
               boxShadow: 24,
               p: 4,
+              overflow: 'auto',
             }}
           >
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+            <Typography 
+              id="transition-modal-title" 
+              variant="h6" 
+              component="h2" 
+              sx={{ textAlign: 'center', mb: 2 }}
+            >
               {selectedTool?.name}
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              {selectedTool?.description}
-            </Typography>
+            {selectedTool?.name === 'BPD (Building Performance Design) Tool' ? (
+              <>
+                <Carousel showThumbs={false}>
+                  <div>
+                    <img src={bpdImg1} alt="BPD Image 1" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={bpdImg2} alt="BPD Image 2" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={bpdImg3} alt="BPD Image 3" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={bpdImg4} alt="BPD Image 4" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                </Carousel>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
+            ) : (
+              <>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
+            )}
           </Box>
         </Fade>
       </Modal>
     
-      <section id="lets-talk-2" className="relative h-screen flex items-center justify-center" style={{ backgroundColor: '#fff', marginTop: '-20px' }}>
-        {/* Additional content can go here */}
-      </section>
+     
     </div>
   );
 };
