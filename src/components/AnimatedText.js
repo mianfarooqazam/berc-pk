@@ -14,7 +14,7 @@ const AnimatedText = () => {
   }, []);
 
   return (
-    <div className="h-screen flex items-end justify-center pb-12">
+    <div className="h-screen flex items-center justify-center pb-12">
       <div className="text-center">
         <h1 className="font-thin" style={{ fontSize: '70px' }}>Construction</h1>
         <h1 className="font-thin" style={{ fontSize: '70px' }}>with an approach that is</h1>
