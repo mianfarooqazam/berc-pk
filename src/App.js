@@ -9,6 +9,7 @@ import WhyUs from './pages/WhyUs';
 import Tools from './pages/Tools';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
+import FooterText from './components/FooterText';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
           <Team />
           <Gallery/>
           <LetsTalk />
-          <AnimatedText />
+        <FooterText />
         </div>
       )}
     </div>

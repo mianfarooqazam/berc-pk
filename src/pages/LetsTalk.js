@@ -13,12 +13,13 @@ const LetsTalk = () => {
         </div>
         <div className="w-1/2 h-full flex flex-col items-center justify-center p-10">
           <h1 
-            className="font-bold text-center font-thin mb-8" 
+            className="font-medium text-center mb-8" 
             style={{ fontSize: '50px' }}
           >
             Contact Us!
           </h1>
           <form className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+          <TextField label="Name" variant="outlined" fullWidth margin="normal" />
             <TextField label="Subject" variant="outlined" fullWidth margin="normal" />
             <TextField label="Message" variant="outlined" fullWidth margin="normal" multiline rows={4} />
             <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
@@ -30,6 +31,12 @@ const LetsTalk = () => {
     
       <section id="lets-talk-2" className="relative h-screen flex items-center justify-center" style={{ backgroundColor: '#fff', marginTop: '-20px' }}>
         <Container maxWidth="lg">
+        <h1 
+            className="font-bold text-center mb-8" 
+            style={{ fontSize: '50px' }}
+          >
+            Contact Us!
+          </h1>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Box

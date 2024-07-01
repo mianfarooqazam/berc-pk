@@ -14,6 +14,11 @@ import lcaImg4 from '../assets/toolsImages/lca-img4.jpg';
 import lcaImg5 from '../assets/toolsImages/lca-img5.jpg';
 import lcaImg6 from '../assets/toolsImages/lca-img6.jpg';
 import lcaImg7 from '../assets/toolsImages/lca-img7.jpg';
+import rlfImg1 from '../assets/toolsImages/rlf-img1.jpg';
+import rlfImg2 from '../assets/toolsImages/rlf-img2.jpg';
+import rlfImg3 from '../assets/toolsImages/rlf-img3.jpg';
+import rlfImg4 from '../assets/toolsImages/rlf-img4.jpg';
+import rlfImg5 from '../assets/toolsImages/rlf-img5.jpg';
 
 const tools = [
   { name: 'LCA (Life Cycle Assessment) Tool', description: 'BERC introduces a set of tools, developed with dedication that helps empowering civil engineers and construction professionals with cutting-edge tools designed to enhance efficiency, precision, and compliance in their projects. Our suite of innovative tools is developed with the latest technology to meet the diverse needs of the industry.' },
@@ -105,7 +110,6 @@ const Tools = () => {
               width: '80%',
               height: '80%',
               bgcolor: 'background.paper',
-              border: '2px solid #000',
               boxShadow: 24,
               p: 4,
               overflow: 'auto',
@@ -145,6 +149,68 @@ const Tools = () => {
                 </Box>
               </>
             ) : selectedTool?.name === 'LCA (Life Cycle Assessment) Tool' ? (
+              <>
+                <Carousel showThumbs={false}>
+                  <div>
+                    <img src={lcaImg1} alt="LCA Image 1" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg2} alt="LCA Image 2" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg3} alt="LCA Image 3" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg4} alt="LCA Image 4" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg5} alt="LCA Image 5" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg6} alt="LCA Image 6" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={lcaImg7} alt="LCA Image 7" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                </Carousel>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
+            ) : selectedTool?.name === 'RLF (Residential Lighting Fixture) Tool' ? (
+              <>
+                <Carousel showThumbs={false}>
+                  <div>
+                    <img src={rlfImg1} alt="RLF Image 1" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={rlfImg2} alt="RLF Image 2" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={rlfImg3} alt="RLF Image 3" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={rlfImg4} alt="RLF Image 4" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    <img src={rlfImg5} alt="RLF Image 5" style={{ maxHeight: '500px', objectFit: 'contain' }} />
+                  </div>
+                </Carousel>
+                <Typography id="transition-modal-description" sx={{ mt: 2, textAlign: 'center' }}>
+                  {selectedTool?.description}
+                </Typography>
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Box>
+              </>
+            ) : selectedTool?.name === 'Compliance Tool' ? (
               <>
                 <Carousel showThumbs={false}>
                   <div>
