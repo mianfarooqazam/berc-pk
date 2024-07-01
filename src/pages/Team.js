@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import bg from '../assets/team.jpg'; 
 import Avatar from '@mui/material/Avatar';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Modal from '../components/modal/modal';
 import teamMembers from '../components/data/TeamMembers';
 
@@ -50,7 +49,7 @@ const Team = () => {
         </div>
       </section>
 
-      <header className="w-full py-2"  style={{ backgroundColor: 'rgb(232, 255, 174)' }}>
+      <header className="w-full py-2" style={{ backgroundColor: 'rgb(232, 255, 174)' }}>
         <h1 
           className="text-center font-medium" 
           style={{ fontSize: '40px', marginTop: '40px' }}
@@ -72,9 +71,11 @@ const Team = () => {
                   style={{ width: '250px', height: '300px' }}
                   onClick={() => handleClickOpen(member)}
                 >
-                  <Avatar sx={{ width: 96, height: 96, mb: 4 }}>
-                    <AccountCircleIcon sx={{ width: 96, height: 96 }} />
-                  </Avatar>
+                  <Avatar 
+                    src={member.img} 
+                    alt={member.name} 
+                    sx={{ width: 96, height: 96, mb: 4 }}
+                  />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                     <p className="text-gray-600">{member.role}</p>
